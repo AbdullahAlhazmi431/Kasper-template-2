@@ -1,0 +1,142 @@
+/* global values */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    --main-blue-color :rgb(0, 199, 252);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+}
+
+/* end global values */
+/* header */
+header{
+    background-color: black;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+
+header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+header .logo {
+    flex-grow: 1;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 3;
+}
+
+header ul a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    padding: 35px 0px;
+    position: relative;
+}
+
+header ul a::before {
+    content: "";
+    position: absolute;
+    visibility: var(--link-visiblity,hidden);
+    width: 120%;
+    height: 100%;
+    top: -1px;
+    left: -10%;
+    border-bottom: 2px var(--main-blue-color,blue) solid;
+}
+
+header ul a:hover{
+    color: var(--main-blue-color,blue);
+    --link-visiblity: visible ;
+}
+
+header .nav .search-logo{
+    padding: 5px 0px 5px 15px;
+    flex-grow: 1;
+    text-align: end;
+    position: relative;
+}
+
+header .nav .search-logo::after{
+    content: "";
+    position: absolute;
+    height: 70%;
+    transform: translateY(-25%);
+    right: 25px;
+    padding: 5px 0px 5px 15px;
+    border-left: 1px solid white;
+}
+
+
+/* Media Qeuries */
+/* small Devices (small Phones) */
+@media (max-width: 576px) {
+    
+}
+
+/* small Devices (Large Phones) */
+@media (min-width: 576px) {
+
+}
+
+/* Tablets */
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px; 
+    }
+  }
+
+/* Laptops */
+@media (min-width: 992px) {
+    .container {
+      width: 960px;
+    }
+  }
+  
+  /* Desktops */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px;
+    }
+  }
+  
+  /* Large Screens / 4K */
+  @media (min-width: 1400px) {
+    .container {
+      width: 1320px;
+    }
+  }
