@@ -22,6 +22,7 @@ ul {
     margin-right: auto;
     margin-left: auto;
     padding: 10px;
+    min-height: 109px;
 }
 
 /* end global values */
@@ -29,7 +30,7 @@ ul {
 header{
     background-color: black;
     color: white;
-    height: 600px;
+   height: 600px;
 }
 
 header .container {
@@ -55,7 +56,6 @@ header .nav {
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    position: relative;
 }
 
 @media (max-width: 992px) {
@@ -70,10 +70,30 @@ header .logo {
     flex-grow: 1;
 }
 
+header .list {
+    flex-grow: 3;
+}
+
+@media (max-width: 992px){
+    header .list:hover {
+        --ul-display:block;
+        --hover-area:block;
+    }
+
+    header .list::before{
+       content: "";
+       position: absolute;
+       display: var(--hover-area,none);
+       width: 29%;
+       height: 112%;
+       bottom: -51%;
+       left: 62%;
+    }
+}
+
 header ul {
     display: flex;
     justify-content: space-between;
-    flex-grow: 3;
 }
 
 @media (max-width: 992px) {
@@ -81,23 +101,11 @@ header ul {
         display: var(--ul-display,none);
         position: absolute;
         color: black;
-        z-index: 10;
-        top: 70px;
+        top: 110%;
         left: 0px;
-    }
-
-    header .nav::after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 35%;
-        left: 0;
-        background: green;
-    }
-
-    header .nav::after:hover{
+        /* full block width */
         width: 100%;
-    }
+    }   
 }
 
 
@@ -117,20 +125,13 @@ header ul a {
     position: relative;
 }
 
-@media (max-width: 992px) {
-    header ul a{
-        padding: 15px 10px;
-
-    }
-}
-
 header ul a::before {
     content: "";
     position: absolute;
     visibility: var(--link-visiblity,hidden);
     width: 120%;
-    height: 100%;
-    top: -1px;
+    height: 110%;
+    top: 0px;
     left: -10%;
     border-bottom: 2px var(--main-blue-color,blue) solid;
 }
@@ -138,6 +139,23 @@ header ul a::before {
 header ul a:hover{
     color: var(--main-blue-color,blue);
     --link-visiblity: visible ;
+}
+
+header ul a:active{
+    color: var(--main-blue-color);
+}
+
+
+@media (max-width: 992px) {
+    header ul a{
+        padding: 15px 10px;       
+    }
+
+    header ul a::before{
+        /* follow up container width */
+        width: 100%;
+        left: 0%;
+    }
 }
 
 header .nav .search-logo{
