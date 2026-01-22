@@ -1,0 +1,265 @@
+/* global values */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    --main-blue-color :rgb(0, 199, 252);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    min-height: 109px;
+}
+
+/* end global values */
+/* header */
+header{
+    color: white;
+    width: 100%;
+    position: absolute;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container::before {
+    content: '';
+    width: calc(100% - 20px);
+    height: 100%;
+    position: absolute;
+    bottom: -1;
+    left: 10px;
+    border-bottom: 1px solid white;
+    pointer-events: none;
+}
+
+header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+@media (max-width: 992px) {
+    header .nav { 
+        justify-content: flex-end;
+        flex-grow: 0;
+        gap: 25px;
+    }
+}
+
+header .logo {
+    flex-grow: 1;
+}
+
+header .list {
+    flex-grow: 3;
+}
+
+/* End header */
+
+/* start landing */
+.landing{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/owl.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.landing .container {
+    position: relative;
+    height: 100%;
+}
+
+.landing .background-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    color: white;
+    transform: translateY(-50%);
+}
+
+.landing .blue-background {
+    position: absolute;
+    background-color: var(--main-blue-color);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    height: 400px;
+}
+
+.landing .background-text h3 {
+    line-height: 2;
+    text-transform: capitalize;
+    font-size: 34px;
+    font-weight: normal;
+}
+
+.landing .background-text p{
+    max-width: 500px;
+
+}
+
+
+@media (max-width: 992px){
+    header .list:hover {
+        --ul-display:block;
+        --hover-area:block;
+    }
+
+    header .list::before{
+       content: "";
+       position: absolute;
+       display: var(--hover-area,none);
+       width: 29%;
+       height: 112%;
+       bottom: -51%;
+       left: 62%;
+    }
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+    header ul {
+        display: var(--ul-display,none);
+        position: absolute;
+        color: black;
+        top: 110%;
+        left: 0px;
+        /* full block width */
+        width: 100%;
+    }   
+}
+
+
+@media (min-width: 993px) {
+    header .nav .bars-icon {
+        display: none;
+    }
+}
+
+header ul a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    padding: 35px 0px;
+    position: relative;
+}
+
+header ul a::before {
+    content: "";
+    position: absolute;
+    visibility: var(--link-visiblity,hidden);
+    width: 120%;
+    height: 110%;
+    top: 0px;
+    left: -10%;
+    border-bottom: 2px var(--main-blue-color,blue) solid;
+}
+
+header ul a:hover{
+    color: var(--main-blue-color,blue);
+    --link-visiblity: visible ;
+}
+
+header ul a:focus {
+  color: var(--main-blue-color, blue);
+}
+
+
+
+@media (max-width: 992px) {
+    header ul a{
+        padding: 15px 10px;       
+    }
+
+    header ul a::before{
+        /* follow up container width */
+        width: 100%;
+        left: 0%;
+    }
+}
+
+header .nav .search-logo{
+    padding: 5px 0px 5px 15px;
+    flex-grow: 1;
+    text-align: end;
+    position: relative;
+}
+
+header .nav .search-logo::after{
+    content: "";
+    position: absolute;
+    height: 70%;
+    transform: translateY(-25%);
+    right: 25px;
+    padding: 5px 0px 5px 15px;
+    border-left: 1px solid white;
+}
+
+
+/* Media Qeuries */
+/* small Devices (small Phones) */
+@media (max-width: 576px) {
+    
+}
+
+/* small Devices (Large Phones) */
+@media (min-width: 576px) {
+
+}
+
+/* Tablets */
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px; 
+    }
+  }
+
+/* Laptops */
+@media (min-width: 992px) {
+    .container {
+      width: 960px;
+    }
+  }
+  
+  /* Desktops */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px;
+    }
+  }
+  
+  /* Large Screens / 4K */
+  @media (min-width: 1400px) {
+    .container {
+      width: 1320px;
+    }
+  }
