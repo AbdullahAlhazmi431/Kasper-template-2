@@ -195,43 +195,34 @@ header .nav .search-logo::after{
 }
 
 .landing .background-text {
-    position: absolute;
-    left: 0;
-    top: 50%;
     color: white;
-    transform: translateY(-50%);
+    line-height: 1.5;
+    width: 500px;
 }
 
 .landing .blue-background {
     position: absolute;
-    background-color: var(--main-blue-color);
-    opacity: 0.6;
+    background-color: rgba(0, 199, 252,0.6);
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 60%;
-    height: 400px;
+    padding: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .landing .background-text h3 {
-    line-height: 2;
+    line-height: 1.5;
     text-transform: capitalize;
     font-size: 34px;
-    font-weight: normal;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-
-.landing .background-text p{
-   max-width: 60%;
-}
 
 @media (max-width: 993px) {
-    .landing .background-text {
-        padding-left: 10px;
-    }
-    .landing .background-text h3 {
-        font-size: 18px;
-    }
+    
 }
 
 /* Media Qeuries */
