@@ -74,51 +74,6 @@ header .list {
     flex-grow: 3;
 }
 
-/* End header */
-
-/* start landing */
-.landing{
-    width: 100%;
-    height: 100vh;
-    background-image: url(../imgs/owl.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.landing .container {
-    position: relative;
-    height: 100%;
-}
-
-.landing .background-text {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    color: white;
-    transform: translateY(-50%);
-}
-
-.landing .blue-background {
-    position: absolute;
-    background-color: var(--main-blue-color);
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60%;
-    height: 400px;
-}
-
-.landing .background-text h3 {
-    line-height: 2;
-    text-transform: capitalize;
-    font-size: 34px;
-    font-weight: normal;
-}
-
-.landing .background-text p{
-    max-width: 500px;
-
-}
 
 
 @media (max-width: 992px){
@@ -223,6 +178,61 @@ header .nav .search-logo::after{
     border-left: 1px solid white;
 }
 
+/* End header */
+
+/* start landing */
+.landing{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/owl.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.landing .container {
+    position: relative;
+    height: 100%;
+}
+
+.landing .background-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    color: white;
+    transform: translateY(-50%);
+}
+
+.landing .blue-background {
+    position: absolute;
+    background-color: var(--main-blue-color);
+    opacity: 0.6;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    height: 400px;
+}
+
+.landing .background-text h3 {
+    line-height: 2;
+    text-transform: capitalize;
+    font-size: 34px;
+    font-weight: normal;
+}
+
+
+.landing .background-text p{
+   max-width: 60%;
+}
+
+@media (max-width: 993px) {
+    .landing .background-text {
+        padding-left: 10px;
+    }
+    .landing .background-text h3 {
+        font-size: 18px;
+    }
+}
 
 /* Media Qeuries */
 /* small Devices (small Phones) */
