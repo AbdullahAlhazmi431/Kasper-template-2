@@ -372,6 +372,78 @@ header .nav .search-logo::after{
 
 /* end services */ 
 
+/* start design */
+.design{
+    background-image: url(../imgs/design-features.jpg);
+    position: relative;
+    height: 720px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .design {
+        height: 1100px;
+    }
+}
+
+.design .image {
+    position: absolute;
+    left: 20%;
+    bottom: -60px;
+}
+
+@media (max-width: 991px) {
+    .design .image {
+        left: 5%;
+    }
+}
+
+.design .blue-background {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    background-color: rgba(0, 199, 252,0.6);
+    padding: 50px;
+}
+
+@media (max-width: 991px) {
+    .design .blue-background {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .design .blue-background {
+        top: 30%;
+        width: 100%;
+    }
+}
+
+.design .text-container{
+    color: white;
+}
+
+.design .text-container .text-box{
+    display: flex;
+    gap: 20px;
+    margin: 25px 0px;
+}
+
+.design .text-container h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 60px;
+    font-size: 22px;
+}
+
+.design .text-container p{
+    text-transform: capitalize;
+    font-size: 18px;
+}
+/* end design */
 /* Media Qeuries */
 /* small Devices (small Phones) */
 @media (max-width: 576px) {
