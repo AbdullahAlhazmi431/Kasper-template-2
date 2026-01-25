@@ -461,7 +461,7 @@ header .nav .search-logo::after{
 /* start portfolio */
 
 .portfolio .nav{
-    margin: 50px;
+    margin: 50px 0px;
 }
 .portfolio .nav ul {
     display: flex;
@@ -469,11 +469,23 @@ header .nav .search-logo::after{
 }
 
 .portfolio .nav ul a {
-    padding: 15px 35px;
+    padding: 15px 30px;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
     color: #777;
+}
+
+@media (max-width: 576px) {
+    .portfolio .nav ul a {
+        padding: 15px 10px;
+    }
+
+    .portfolio .nav ul {
+        /* if nececssry put elemnt down */
+        flex-wrap: wrap;
+        height: 60px;
+    }
 }
 
 .portfolio .nav ul a:hover {
@@ -488,19 +500,60 @@ header .nav .search-logo::after{
 
 @media (min-width: 1200px) {
    .portfolio .imgs-container {
-    grid-template-columns: repeat(auto-fill,minmax(calc(100% / 4),1fr));
+    grid-template-columns: repeat(4,1fr);
 } 
 }
 
 .portfolio .imgs-container div {
     margin: 2px;
+    position: relative;
+    overflow: hidden;
 }
 
+.portfolio .imgs-container .caption {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+    margin: 0;
+    transition: 0.2s;
+    transform: translateY(var(--caption-translate,100%));
+    padding: 20px;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.portfolio .imgs-container .caption p {
+    color: var(--main-blue-color);
+    margin-top: 6px;
+}
+
+.portfolio .imgs-container div:hover {
+    --img-rotate:2deg;
+    --caption-translate:0;  
+}
 
 .portfolio .imgs-container div img {
+    transition: 0.2s;
+    transform: rotate(var(--img-rotate,0));
     width: 100%;
     height: 100%;
 }
+
+.portfolio .more-button {
+    text-align: center;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    width: 120px;
+    margin: 35px auto ;
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-blue-color);
+}
+
+.portfolio .more-button:hover {
+    scale: 1.10;
+}
+
 
 /* end portfolio */
 /* Media Qeuries */
