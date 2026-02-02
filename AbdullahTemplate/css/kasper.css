@@ -588,7 +588,7 @@ header .nav .search-logo::after{
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 199, 252,0.6);
-    z-index: -1;
+    z-index: 1;
     color: white;
     text-align: center;
     text-transform: uppercase;
@@ -611,7 +611,6 @@ header .nav .search-logo::after{
     padding: 1% 2%;
     align-self: center;
     margin: 3% auto 0px;
-    z-index: 1;
 }
 
 .video .see-more-button:hover {
