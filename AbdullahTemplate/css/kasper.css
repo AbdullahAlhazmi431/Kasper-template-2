@@ -470,7 +470,7 @@ header .nav .search-logo::after{
 }
 
 .portfolio .nav ul a {
-    padding: 15px 30px;
+    padding: 15px 28px;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
@@ -654,7 +654,6 @@ header .nav .search-logo::after{
     }
 }
 
-
 .about .picture img {
     width: 100%;
 }
@@ -727,7 +726,213 @@ header .nav .search-logo::after{
         font-size: 40px;
     }
 }
+
 /* end statistics */
+
+/* start skills */
+
+.skills {
+    margin-bottom: 50px;
+}
+
+.skills .grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px , 1fr));
+    gap: 10%;
+}
+
+@media (max-width: 590px) {
+   .skills .grid-container{
+        grid-template-columns: repeat(auto-fill,minmax(350px , 1fr));
+   }
+}
+
+.skills .text-box {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.skills .text-box h3 {
+    font-size: 25px;
+    color: #777;
+}
+
+.skills .text-box p {
+    margin-top: 20px;
+    color: #777;
+}
+
+.skills .profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skills .profiles .profile {
+    display: flex;
+    gap: 40px;
+}
+
+.skills .profiles .profile .desc {
+    position: relative;
+    
+}
+
+.skills .profiles .profile .desc p {
+    line-height: 2;
+    padding: 0px 0px 35px ;
+}
+
+.skills .profiles .profile .desc::before {
+    content: "";
+    width: 100%;
+    height: 1.5%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+
+.skills .profiles .profile .desc::after {
+    content: "John Doe CEO";
+    position: absolute;
+    color: #777;
+    opacity: 0.6;
+    font-style: italic;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-10px);
+}
+
+.skills .profiles .profile .avatar {
+    align-self: center;
+}
+.skills .profiles .profile .avatar img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.skills .col {
+    position: relative;
+}
+
+.skills .points {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skills .points span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    border: solid 1px #777;
+}
+
+.skills .points span:hover {
+    background-color: var(--main-blue-color);
+    cursor:pointer ;
+}
+
+.skills .bars-section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+.skills .bars-section div {
+    height: 30px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, var(--main-blue-color) 70%, rgb(220, 218, 216) 70%);
+}
+
+@media (max-width: 576px) {
+    .skills .bars-section div {
+        width: 85%;
+    }
+}
+
+.skills .bars-section div p {
+    transform: translate(5px ,-25px);
+    text-transform: uppercase;
+}
+
+.skills .bars-section div::before {
+    content: "95%";
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: -40px;
+    /* % of the element */
+    left: 95%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .bars-section div::after{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 6px solid;
+    border-color: black transparent transparent transparent;
+    top: -10px;
+    /* % of the element */
+    left: 95%;
+    transform: translateX(-50%);
+}
+
+
+.skills .bars-section div.adobe {
+    background: linear-gradient(to right, var(--main-blue-color) 95%, rgb(220, 218, 216) 95%);
+}
+
+.skills .bars-section div.html {
+    background: linear-gradient(to right, var(--main-blue-color) 93%, rgb(220, 218, 216) 93%);
+}
+
+.skills .bars-section div.html::before {
+    content: "93%";
+    left: 93%;
+}
+
+.skills .bars-section div.html::after {
+    left: 93%;
+}
+
+.skills .bars-section div.javascript {
+    background: linear-gradient(to right, var(--main-blue-color) 85%, rgb(220, 218, 216) 85%);
+}
+
+.skills .bars-section div.javascript::before {
+    content: "85%";
+    left: 85%;
+}
+
+.skills .bars-section div.javascript::after {
+    left: 85%;
+}
+
+.skills .bars-section div.php {
+    background: linear-gradient(to right, var(--main-blue-color) 87%, rgb(220, 218, 216) 87%);
+}
+
+.skills .bars-section div.php::before {
+    content: "87%";
+    left: 87%;
+}
+
+.skills .bars-section div.php::after {
+    left: 87%;
+}
+/* end skills */
 
 /* Media Qeuries */
 /* small Devices (small Phones) */
