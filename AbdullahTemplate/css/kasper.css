@@ -80,8 +80,6 @@ ul {
 .container{
     margin-right: auto;
     margin-left: auto;
-    padding: 10px;
-    min-height: 109px;
 }
 
 /* end global values */
@@ -97,6 +95,8 @@ header .container {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 10px;
+    min-height: 109px;
 }
 
 header .container::before {
@@ -823,16 +823,23 @@ header .nav .search-logo::after{
     left: 50%;
     transform: translateX(-50%);
 }
-.skills .points span {
+.skills .points span{
+    display: flex;
     width: 20px;
     height: 20px;
     border-radius: 50%; 
     border: solid 1px #777;
 }
 
+.skills .points span:nth-child(2) {
+    background-color: var(--second-point-color , var(--main-blue-color));
+}
+
 .skills .points span:hover {
+    --second-point-color:white ; 
     background-color: var(--main-blue-color);
     cursor:pointer ;
+    border: none;
 }
 
 .skills .bars-section {
@@ -844,7 +851,7 @@ header .nav .search-logo::after{
 
 .skills .bars-section div {
     height: 30px;
-    width: 100%;
+    width: 95%;
     position: relative;
     background: linear-gradient(to right, var(--main-blue-color) 70%, rgb(220, 218, 216) 70%);
 }
@@ -934,6 +941,274 @@ header .nav .search-logo::after{
 }
 /* end skills */
 
+/* start subscription */
+
+.subscription {
+    padding-bottom: 0px;
+}
+
+.subscription .back-ground {
+    background-image: url(../imgs/subscribe.jpg);
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.subscription .desc {
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    font-size: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    width: 80%;
+    text-align: center;
+    line-height: 2;
+}
+
+@media (max-width: 576px) {
+    .subscription .desc {
+        font-size: 18px;
+    }
+}
+
+.subscription .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
+    gap: 25px;
+}
+
+@media (max-width: 576px) {
+    .subscription .grid-container .col {
+        border: 1px #777 solid;
+    }
+}
+
+.subscription .grid-container .col .plan {
+    text-transform: uppercase;
+    width: 100%;
+    padding: 25px 0px;
+    text-align: center;
+    border: solid 1px ;
+    border-color: var(--main-blue-color) transparent var(--main-blue-color) transparent;
+}
+
+.subscription .grid-container .col .plan .price {
+    font-size: 45px;
+    font-weight: 600;
+    margin: 20px auto 0px;
+    position: relative;
+    width: min-content;
+}
+
+.subscription .grid-container .col .plan .price::before {
+    content: "$";
+    position: absolute;
+    left: -55%;
+    font-size: 18px;
+}
+
+.subscription .grid-container .col .plan .price::after {
+    content: "/MO";
+    position: absolute;
+    right: -80%;
+    bottom: 5px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.subscription .grid-container .col > p {
+    padding: 25px 0px;
+    margin: auto;
+    text-align: center;
+    border: solid 1px ;
+    width: 50%;
+    border-color: transparent transparent var(--main-blue-color) transparent;
+}
+
+.subscription .grid-container .col > p:last-of-type {
+    width: 100%;
+}
+
+.subscription .grid-container .col button {
+    display: block;
+    width: fit-content;
+    margin: 50px auto;
+    padding: 15px 30px;
+    background-color: white;
+    border: 1px solid var(--main-blue-color);
+}
+
+.subscription .grid-container .col button:hover {
+    background-color: var(--main-blue-color);
+    color: white;
+    cursor: pointer;
+}
+
+.subscription .concat  {
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.subscription .concat button {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 15px 40px;
+    background-color: var(--main-blue-color);
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+.subscription .concat button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.subscription .email-background {
+    background-image: url(../imgs/subscribe.jpg);
+    height: 50vh;
+    background-position: center bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.subscription .flex-container {
+    display: flex;
+    color: white;
+}
+
+.subscription .flex-container .email-input {
+    width: 100%;
+    display: flex;
+}
+
+@media (max-width: 992px) {
+    .subscription .flex-container{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.subscription .flex-container .input {
+    flex-grow: 1;
+    position: relative;
+    margin-left: 10px;
+}
+
+.subscription .flex-container input {
+    background-color: transparent;
+    border: 1px #ffffff solid;
+    height: 70px;
+    width: 100%;
+    padding-left: 55px;
+    color: white;
+}
+
+.subscription .flex-container .input i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.subscription .flex-container input::placeholder {
+    color: white;
+}
+
+.subscription .flex-container button {
+    margin-right: 40px;
+    padding: 0px 5% ;
+    text-transform: uppercase;
+    background-color: var(--main-blue-color);
+    border: 1px solid white;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .subscription .flex-container button {
+        margin-right: 10px;
+        height: 40px;
+    }
+
+    .subscription .flex-container input {
+        height: 40px;
+    }
+
+    .subscription .flex-container .deses {
+        text-align: center;
+    }
+}
+
+.subscription .flex-container .deses {
+    line-height: 1.5;
+    align-self: center;
+}
+
+/* end subscription */
+
+/* start contact */
+
+@media (max-width: 576px) {
+    .contact .container {
+        padding: 10px;
+    }
+}
+
+.contact .flex-container {
+    display: flex;
+    gap: 3%;
+}
+
+.contact .flex-container form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contact .flex-container form input{
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.contact .flex-container form textarea {
+    height: 200px;
+    padding: 20px;
+}
+.contact .flex-container form textarea::placeholder {
+    text-transform: uppercase;
+}
+
+.contact .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    color: #777
+}
+
+.contact .texts h3 {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.contact .texts p {
+    line-height: 1.5;
+}
+
+.contact form button {
+    display: block;
+    margin: 80px auto;
+    text-transform: uppercase;
+    background-color: var(--main-blue-color);
+    border: 1px solid white;
+    color: white;
+    width: 250px;
+    padding: 30px 20px;
+}
 /* Media Qeuries */
 /* small Devices (small Phones) */
 @media (max-width: 576px) {
