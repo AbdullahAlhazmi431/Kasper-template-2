@@ -1162,6 +1162,8 @@ header .nav .search-logo::after{
 .contact .flex-container {
     display: flex;
     gap: 3%;
+    padding-bottom: 150px;
+    position: relative;
 }
 
 .contact .flex-container form {
@@ -1201,13 +1203,72 @@ header .nav .search-logo::after{
 
 .contact form button {
     display: block;
-    margin: 80px auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     text-transform: uppercase;
     background-color: var(--main-blue-color);
     border: 1px solid white;
     color: white;
     width: 250px;
     padding: 30px 20px;
+}
+
+/* end contact */
+/* start footer */
+footer{
+    padding: 30px 0px;
+    background-image: url(../imgs/footer.jpg);
+    background-position: center ;
+    background-size: cover;
+    color: white;
+    position: relative;
+    z-index: -2;
+}
+
+footer .footer-landing{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+footer .logo {
+    margin: 70px auto;
+    width: max-content;
+}
+
+footer .social{
+    margin: 20px auto;
+    width: max-content;
+}
+
+footer .social h3 {
+    padding: 0px 30px 20px ;
+    font-weight: normal;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-bottom: white 1px solid;
+}
+
+footer .social .logos {
+    margin: 30px auto;
+    width: max-content;
+    display: flex;
+    gap: 35px;
+}
+
+footer .rights{
+    margin: 0px auto;
+    width: max-content;
+        margin-top: 80px;
+}
+
+footer .rights span {
+    color: var(--main-blue-color);
 }
 /* Media Qeuries */
 /* small Devices (small Phones) */
